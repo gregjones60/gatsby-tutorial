@@ -2,12 +2,7 @@ import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import {container, navLinkItem, navLinks, navLinkText, heading, siteTitle} from './layout.module.css'
 
-export class LayoutProps {
-    pageTitle?: string;
-    children?: any;
-}
-
-const Layout = (layout: LayoutProps) => {
+const Layout = (layout) => {
     const data = useStaticQuery(graphql`
     query {
       site {
